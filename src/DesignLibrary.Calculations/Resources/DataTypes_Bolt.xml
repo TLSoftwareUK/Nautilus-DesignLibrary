@@ -1,0 +1,38 @@
+<div>
+  <h1>
+  Bolt Resistances
+</h1>
+  <h2>Properties</h2>
+  <h3>Bolt Properties</h3>
+  <table>
+    <input name="Diameter"/>
+    <input name="HoleDiameter"/>
+    <input name="Grade"/>
+	<input name="DesignUltimateStrength"/>
+	<input name="TensileStressArea"/>
+    <input name="PartialFactorResistanceBolt"/>
+	<input name="MajorSpacing"/>
+	<input name="MinorSpacing"/>
+  </table>
+  <h3>Member 1 Properties</h3>
+  <table>
+    <input name="Member1Thickness"/>
+    <input name="Member1UltimateStrength"/>
+    <input name="Member1MajorEdgeDistance"/>
+    <input name="Member1MinorEdgeDistance"/>
+  </table>
+  <h3>Member 2 Properties</h3>
+  <table>
+    <input name="Member2Thickness"/>
+    <input name="Member2UltimateStrength"/>
+    <input name="Member2MajorEdgeDistance"/>
+    <input name="Member2MinorEdgeDistance"/>
+  </table>
+  <h2>Shear Resistance</h2>
+  <div class="calc-step">
+	<div class="variable">'V_(Ed)='</div>
+	<div class="formula">'(alpha_v f_(ub)A)/gamma_(M2)'</div>
+	<div class="reference">Table 3.4</div>  
+  </div>
+  <h2>Bearing Resistance</h2>
+</div>

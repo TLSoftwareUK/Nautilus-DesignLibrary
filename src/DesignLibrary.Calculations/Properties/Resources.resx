@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AbstractBar_CombinedUsage_Description" xml:space="preserve">
+    <value>Combined moment, shear and axial usage</value>
+  </data>
+  <data name="AbstractBar_CombinedUsage_Group" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="AbstractBar_CombinedUsage_Name" xml:space="preserve">
+    <value>Usage</value>
+  </data>
+  <data name="AbstractBar_CrossSection_Description" xml:space="preserve">
+    <value>Cross Section of Section</value>
+  </data>
+  <data name="AbstractBar_CrossSection_Group" xml:space="preserve">
+    <value>Section Properties</value>
+  </data>
+  <data name="AbstractBar_CrossSection_Name" xml:space="preserve">
+    <value>Cross Section</value>
+  </data>
+  <data name="AbstractBar_Material_Description" xml:space="preserve">
+    <value>Material of Section</value>
+  </data>
+  <data name="AbstractBar_Material_Group" xml:space="preserve">
+    <value>Section Properties</value>
+  </data>
+  <data name="AbstractBar_Material_Name" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="EndPlateConnection_BoltRows_Description" xml:space="preserve">
+    <value>Bolts that form the connection</value>
+  </data>
+  <data name="EndPlateConnection_BoltRows_Group" xml:space="preserve">
+    <value>Connection Elements</value>
+  </data>
+  <data name="EndPlateConnection_BoltRows_Name" xml:space="preserve">
+    <value>Bolts</value>
+  </data>
+  <data name="EndPlateConnection_CalculationName" xml:space="preserve">
+    <value>Steel End Plate Connection</value>
+  </data>
+  <data name="EndPlateConnection_Code" xml:space="preserve">
+    <value>BS EN 1993-1-8</value>
+  </data>
+  <data name="EndPlateConnection_Description" xml:space="preserve">
+    <value>Eurocode calculation for a steel end plate connection</value>
+  </data>
+  <data name="EndPlateConnection_IncomingMemberSection_Description" xml:space="preserve">
+    <value>Cross section of the supported member</value>
+  </data>
+  <data name="EndPlateConnection_IncomingMemberSection_Group" xml:space="preserve">
+    <value>Supported Member</value>
+  </data>
+  <data name="EndPlateConnection_IncomingMemberSection_Name" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="EndPlateConnection_SupportingMemberRotation_Description" xml:space="preserve">
+    <value>Rotation in degrees clockwise positive. A value of 0 represents a connection parallel to the member flange</value>
+  </data>
+  <data name="EndPlateConnection_SupportingMemberRotation_Group" xml:space="preserve">
+    <value>Supported Member</value>
+  </data>
+  <data name="EndPlateConnection_SupportingMemberRotation_Name" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="EndPlateConnection_SupportingMemberSection_Description" xml:space="preserve">
+    <value>Cross section of the supporting member</value>
+  </data>
+  <data name="EndPlateConnection_SupportingMemberSection_Group" xml:space="preserve">
+    <value>Supporting Member</value>
+  </data>
+  <data name="EndPlateConnection_SupportingMemberSection_Name" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="FinPlateConnection_CalculationName" xml:space="preserve">
+    <value>Steel Fin Plate Connection</value>
+  </data>
+  <data name="FinPlateConnection_Code" xml:space="preserve">
+    <value>BS EN 1993-1-8</value>
+  </data>
+  <data name="FinPlateConnection_Description" xml:space="preserve">
+    <value>Eurocode calculation for a steel fin plate connection</value>
+  </data>
+  <data name="FinPlate_CalculationName" xml:space="preserve">
+    <value>Fin Plate</value>
+  </data>
+  <data name="FinPlate_Code" xml:space="preserve">
+    <value>BS EN 1993-1-8</value>
+  </data>
+  <data name="FinPlate_Description" xml:space="preserve">
+    <value>Fin Plate</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_CalculationName" xml:space="preserve">
+    <value>NHBC Foundation Depth 2020</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_Code" xml:space="preserve">
+    <value>NHBC Chapter 4.2 - Building Near Trees</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_Description" xml:space="preserve">
+    <value>Calculation fo foundation depths in accordance with NHBC Chapter 4.2 - Building Near Trees</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ExistingGroundLevel_Description" xml:space="preserve">
+    <value>Level of existing ground in metres, with respect to sea level</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ExistingGroundLevel_Group" xml:space="preserve">
+    <value>Levels</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ExistingGroundLevel_Missing" xml:space="preserve">
+    <value>Existing ground level is required</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ExistingGroundLevel_Name" xml:space="preserve">
+    <value>Existing Ground Level</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ExistingPlantingFoundationDepth_Description" xml:space="preserve">
+    <value>Minimum required foundation depth in metres due to existing planting</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ExistingPlantingFoundationDepth_Group" xml:space="preserve">
+    <value>Depths</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ExistingPlantingFoundationDepth_Name" xml:space="preserve">
+    <value>Existing Planting Depth</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ExistingTreeInfluence_Description" xml:space="preserve">
+    <value>Minimum depth in metres as a positive number relative to ground level for existing planting</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ExistingTreeInfluence_Group" xml:space="preserve">
+    <value>Tree Influences</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ExistingTreeInfluence_Name" xml:space="preserve">
+    <value>Existing Tree Influence</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_FoundationDepth_Description" xml:space="preserve">
+    <value>Minimum required foundation depth in metres</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_FoundationDepth_Group" xml:space="preserve">
+    <value>Depths</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_FoundationDepth_Name" xml:space="preserve">
+    <value>Foundation Depth</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_MinimumFoundationDepth_Description" xml:space="preserve">
+    <value>Minimum required foundation depth in metres due to soil plasticity</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_MinimumFoundationDepth_Group" xml:space="preserve">
+    <value>Depths</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_MinimumFoundationDepth_Name" xml:space="preserve">
+    <value>Minimum Foundation Depth</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ProposedGroundLevel_Description" xml:space="preserve">
+    <value>Level of proposed ground in metres, with respect to sea level</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ProposedGroundLevel_Group" xml:space="preserve">
+    <value>Levels</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ProposedGroundLevel_Name" xml:space="preserve">
+    <value>Proposed Ground Level</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ProposedPlantingFoundationDepth_Description" xml:space="preserve">
+    <value>Minimum required foundation depth in metres due to proposed planting</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ProposedPlantingFoundationDepth_Group" xml:space="preserve">
+    <value>Depths</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ProposedPlantingFoundationDepth_Name" xml:space="preserve">
+    <value>Proposed Planting</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ProposedTreeInfluence_Description" xml:space="preserve">
+    <value>Minimum depth in metres as a positive number relative to ground level for proposed planting</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ProposedTreeInfluence_Group" xml:space="preserve">
+    <value>Tree Influences</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_ProposedTreeInfluence_Name" xml:space="preserve">
+    <value>Proposed Tree Influence</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_RemovedExistingPlantingFoundationDepth_Description" xml:space="preserve">
+    <value>Minimum required foundation depth in metres due to removed planting</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_RemovedExistingPlantingFoundationDepth_Group" xml:space="preserve">
+    <value>Depths</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_RemovedExistingPlantingFoundationDepth_Name" xml:space="preserve">
+    <value>Removed Planting</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_RemovedTreeInfluence_Description" xml:space="preserve">
+    <value>Minimum depth in metres as a positive number relative to ground level for removed planting</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_RemovedTreeInfluence_Group" xml:space="preserve">
+    <value>Tree Influences</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_RemovedTreeInfluence_Name" xml:space="preserve">
+    <value>Removed Tree Influence</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_SoilPlasticity_Description" xml:space="preserve">
+    <value>Volume change potential based on modified Atterburg limits</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_SoilPlasticity_Group" xml:space="preserve">
+    <value>Soil Properties</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_SoilPlasticity_Name" xml:space="preserve">
+    <value>Soil Volume Change Potential</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_TopOfConcreteLevel_Description" xml:space="preserve">
+    <value>Level of top of concrete in metres, with respect to sea level</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_TopOfConcreteLevel_Group" xml:space="preserve">
+    <value>Levels</value>
+  </data>
+  <data name="NHBC2020FoundationDepth_TopOfConcreteLevel_Name" xml:space="preserve">
+    <value>Top of Concrete</value>
+  </data>
+  <data name="Plate_MajorDimension_Description" xml:space="preserve">
+    <value>Height of plate</value>
+  </data>
+  <data name="Plate_MajorDimension_Group" xml:space="preserve">
+    <value>Geometry</value>
+  </data>
+  <data name="Plate_MajorDimension_Name" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="Plate_MinorDimension_Description" xml:space="preserve">
+    <value>Width of plate</value>
+  </data>
+  <data name="Plate_MinorDimension_Group" xml:space="preserve">
+    <value>Geometry</value>
+  </data>
+  <data name="Plate_MinorDimension_Name" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="Plate_Thickness_Description" xml:space="preserve">
+    <value>Thickness of plate</value>
+  </data>
+  <data name="Plate_Thickness_Group" xml:space="preserve">
+    <value>Geometry</value>
+  </data>
+  <data name="Plate_Thickness_Name" xml:space="preserve">
+    <value>Thickness</value>
+  </data>
+  <data name="SteelConnection_MajorShearForce_Description" xml:space="preserve">
+    <value>Shear Force about the major axis</value>
+  </data>
+  <data name="SteelConnection_MajorShearForce_Group" xml:space="preserve">
+    <value>Design Loads</value>
+  </data>
+  <data name="SteelConnection_MajorShearForce_Name" xml:space="preserve">
+    <value>Major Shear Force</value>
+  </data>
+  <data name="SteelConnection_MinorShearForce_Description" xml:space="preserve">
+    <value>Shear Force about the minoraxis</value>
+  </data>
+  <data name="SteelConnection_MinorShearForce_Group" xml:space="preserve">
+    <value>Design Loads</value>
+  </data>
+  <data name="SteelConnection_MinorShearForce_Name" xml:space="preserve">
+    <value>Minor Shear Force</value>
+  </data>
+  <data name="SteelConnection_TyingForce_Description" xml:space="preserve">
+    <value>Tying Force the connection is to be designed in isolation for</value>
+  </data>
+  <data name="SteelConnection_TyingForce_Group" xml:space="preserve">
+    <value>Design Loads</value>
+  </data>
+  <data name="SteelConnection_TyingForce_Name" xml:space="preserve">
+    <value>Tying Force</value>
+  </data>
+  <data name="SteelConnection_TyingUsage_Description" xml:space="preserve">
+    <value>Utilisation of tying force resistance as a percentage</value>
+  </data>
+  <data name="SteelConnection_TyingUsage_Group" xml:space="preserve">
+    <value>Tying</value>
+  </data>
+  <data name="SteelConnection_TyingUsage_Name" xml:space="preserve">
+    <value>Tying Utilisation</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="UKB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UKB.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+</root>
