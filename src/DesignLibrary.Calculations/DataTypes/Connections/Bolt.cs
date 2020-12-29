@@ -45,7 +45,7 @@ namespace Jpp.DesignCalculations.Calculations.DataTypes.Connections
 
         public double TensionResistance { get; private set; }
 
-        public override void RunBody(OutputBuilder builder)
+        protected override void RunBody(OutputBuilder builder)
         {
             // 0.6 for grade 8.8 and 4.6, 0.5 for class 10.9
             // 0.8 to allow for presence of tension in bolt

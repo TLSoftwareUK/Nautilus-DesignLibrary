@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Jpp.Common;
 using Jpp.DesignCalculations.Calculations;
 using Jpp.DesignCalculations.Calculations.Attributes;
 
 namespace Jpp.DesignCalculations.Engine.Project
 {
-    public class EngineCalculation
+    public class EngineCalculation : BaseNotify
     {
         public double X { get; set; }
         public double Y { get; set; }
@@ -38,12 +39,12 @@ namespace Jpp.DesignCalculations.Engine.Project
         public IReadOnlyList<IOProperty> Inputs { get; private set; }
         public IReadOnlyList<IOProperty> Outputs { get; private set; }
 
-        public EngineCalculation(double x, double y, string friendlyName, Calculation instance)
+        public EngineCalculation(double x, double y, string instanceName, Calculation calc)
         {
             X = x;
             Y = y;
-            InstanceName = friendlyName;
-            Calc = instance;
+            InstanceName = instanceName;
+            Calc = calc;
 
             List<IOProperty> inputs = new List<IOProperty>();
             List<IOProperty> outputs = new List<IOProperty>();
@@ -53,7 +54,10 @@ namespace Jpp.DesignCalculations.Engine.Project
 
             foreach (PropertyInfo prop in inputFields)
             {
-                inputs.Add(new IOProperty(prop, instance));
+                IOProperty newProp = new IOProperty(prop, calc);
+                inputs.Add(newProp);
+                newProp.PropertyChanged += (sender, args) => { OnPropertyChanged(nameof(Calc)); };
+
             }
             
             var outputFields = Calc.GetType().GetProperties()
@@ -61,7 +65,7 @@ namespace Jpp.DesignCalculations.Engine.Project
 
             foreach (PropertyInfo prop in outputFields)
             {
-                outputs.Add(new IOProperty(prop, instance));
+                outputs.Add(new IOProperty(prop, calc));
             }
 
             Inputs = inputs.OrderBy(a => a.Group).ThenBy(a => a.Name).ToList();

@@ -40,7 +40,7 @@ namespace Jpp.DesignCalculations.Calculations.DataTypes.Connections
         public double Member2MinorBearingResistance { get; private set; }
         public double TensionResistance { get; private set; }
 
-        public override void RunBody(OutputBuilder builder)
+        protected override void RunBody(OutputBuilder builder)
         {
             // TODO: Link variables including tension
             

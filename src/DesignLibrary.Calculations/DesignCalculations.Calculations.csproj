@@ -5,6 +5,8 @@
     <Nullable>enable</Nullable>
     <RootNamespace>Jpp.DesignCalculations.Calculations</RootNamespace>
     <LangVersion>8.0</LangVersion>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)\GeneratedFiles</CompilerGeneratedFilesOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +15,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="System.Text.Json" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\TypeDiscriminatorSourceGenerator\TypeDiscriminatorSourceGenerator\TypeDiscriminatorSourceGenerator.csproj" OutputItemType="Analyzer" />
   </ItemGroup>
 
   <ItemGroup>

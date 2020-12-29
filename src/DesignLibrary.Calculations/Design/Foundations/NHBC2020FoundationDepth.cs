@@ -74,7 +74,7 @@ namespace Jpp.DesignCalculations.Calculations.Design.Foundations
             Code = Resources.NHBC2020FoundationDepth_Code;
         }
 
-        public override void RunBody(OutputBuilder builder)
+        protected override void RunBody(OutputBuilder builder)
         {
             ResetCalculation();
             VerifyInputs();

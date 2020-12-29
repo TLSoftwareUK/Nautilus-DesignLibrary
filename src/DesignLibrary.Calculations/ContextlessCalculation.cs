@@ -15,6 +15,6 @@
             RunEnd(builder);
         }
 
-        public abstract void RunBody(OutputBuilder builder);
+        protected abstract void RunBody(OutputBuilder builder);
     }
 }

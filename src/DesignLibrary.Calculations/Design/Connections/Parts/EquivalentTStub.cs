@@ -27,7 +27,7 @@ namespace Jpp.DesignCalculations.Calculations.Design.Connections.Parts
 
         public double DesignResistance { get; private set; }
         
-        public override void RunBody(OutputBuilder builder)
+        protected override void RunBody(OutputBuilder builder)
         {
             Mode1MomentResistance = 0.25 * EffectiveLength1 * Math.Pow(Thickness, 2) * YieldStrength / MaterialFactorOfSafety;
             // TODO: Implement mode 1 alternate as a double check

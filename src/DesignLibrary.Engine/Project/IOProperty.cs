@@ -1,10 +1,11 @@
 ﻿using System.Reflection;
+using Jpp.Common;
 using Jpp.DesignCalculations.Calculations;
 using Jpp.DesignCalculations.Calculations.Attributes;
 
 namespace Jpp.DesignCalculations.Engine.Project
 {
-    public class IOProperty
+    public class IOProperty : BaseNotify
     {
         private readonly PropertyInfo _backingProperty;
         private readonly Calculation _backingInstance;
@@ -74,6 +75,8 @@ namespace Jpp.DesignCalculations.Engine.Project
                 setValue = double.Parse(value);
             
             _backingProperty.SetValue(_backingInstance, setValue);
+            
+            OnPropertyChanged(nameof(Value));
         }
     }
 

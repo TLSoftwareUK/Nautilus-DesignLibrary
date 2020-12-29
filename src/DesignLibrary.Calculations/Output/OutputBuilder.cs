@@ -27,6 +27,11 @@ namespace Jpp.DesignCalculations.Calculations
 
         }
 
+        public void Clear()
+        {
+
+        }
+
         public void BeginCalculation(Calculation calc)
         {
             CalculationOutput output = new CalculationOutput(calc);

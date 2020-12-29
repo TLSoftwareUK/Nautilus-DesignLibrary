@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Jpp.DesignCalculations.Engine.Project
 {
-    public class ProjectRevision
+    public class ProjectRevision : CalculationContainer
     {
         public Guid RevisionId { get; set; }
 
