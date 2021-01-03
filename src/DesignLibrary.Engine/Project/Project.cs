@@ -95,6 +95,7 @@ namespace Jpp.DesignCalculations.Engine.Project
             foreach (ProjectRevision rev in Revisions.Values)
             {
                 rev.PropertyChanged += (sender, args) => this.OnPropertyChanged(nameof(Revisions));
+                rev.OnDeserialize();
             }
         }
     }

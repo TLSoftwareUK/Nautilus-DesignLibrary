@@ -57,7 +57,6 @@ namespace Jpp.DesignCalculations.Engine.Project
                 IOProperty newProp = new IOProperty(prop, calc);
                 inputs.Add(newProp);
                 newProp.PropertyChanged += (sender, args) => { OnPropertyChanged(nameof(Calc)); };
-
             }
             
             var outputFields = Calc.GetType().GetProperties()
@@ -70,6 +69,14 @@ namespace Jpp.DesignCalculations.Engine.Project
 
             Inputs = inputs.OrderBy(a => a.Group).ThenBy(a => a.Name).ToList();
             Outputs = outputs.OrderBy(a => a.Group).ThenBy(a => a.Name).ToList();
+        }
+        
+        public void OnDeserialize()
+        {
+            foreach (IOProperty input in Inputs)
+            {
+                input.PropertyChanged += (sender, args) => this.OnPropertyChanged(nameof(Inputs));
+            }
         }
     }
 

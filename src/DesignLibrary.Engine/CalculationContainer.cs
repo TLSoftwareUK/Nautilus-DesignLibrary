@@ -48,9 +48,10 @@ namespace Jpp.DesignCalculations.Engine
         {
             Calculation calc = (Calculation)Activator.CreateInstance(info);
             EngineCalculation eCalc = new EngineCalculation(x, y, name, calc);
+            eCalc.PropertyChanged += (sender, args) => { OnPropertyChanged(nameof(ContextlessCalculations)); };
             if (typeof(ContextualCalculation).IsAssignableFrom(calc.GetType()))
             {
-                _contextualCalculations.Add(eCalc);   
+                _contextualCalculations.Add(eCalc);
                 OnPropertyChanged(nameof(ContextualCalculations));
             }
             else
@@ -60,6 +61,16 @@ namespace Jpp.DesignCalculations.Engine
             }
 
             return calc;
+        }
+
+        //TODO: Should this have a converter?
+        public void OnDeserialize()
+        {
+            foreach (EngineCalculation calc in Calculations)
+            {
+                calc.PropertyChanged += (sender, args) => this.OnPropertyChanged(nameof(Calculations));
+                calc.OnDeserialize();
+            }
         }
     }
 }

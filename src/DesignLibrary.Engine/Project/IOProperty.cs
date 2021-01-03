@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using Jpp.Common;
 using Jpp.DesignCalculations.Calculations;
 using Jpp.DesignCalculations.Calculations.Attributes;
@@ -13,6 +14,9 @@ namespace Jpp.DesignCalculations.Engine.Project
         public string Name { get; private set; }
         public string Group { get; private set; }
         public string Description { get; private set; }
+        
+        public bool Required { get; private set; }
+        public bool Valid { get; private set; }
         
         public IOPropertyDataType DataType { get; set; }
 
@@ -33,6 +37,9 @@ namespace Jpp.DesignCalculations.Engine.Project
                 Name = attr1.FriendlyName;
                 Group = attr1.Group;
                 Description = attr1.Description;
+                Required = attr1.Required;
+                if(String.IsNullOrWhiteSpace(Value) && Required)
+                    Valid = false;
 
                 switch (attr1.Units)
                 {
@@ -55,6 +62,7 @@ namespace Jpp.DesignCalculations.Engine.Project
                 Name = attr2.FriendlyName;
                 Group = attr2.Group;
                 Description = attr2.Description;
+                Required = false;
             }
         }
 
@@ -72,8 +80,19 @@ namespace Jpp.DesignCalculations.Engine.Project
             object setValue = value;
 
             if (DataType == IOPropertyDataType.Numeric)
-                setValue = double.Parse(value);
-            
+            {
+                double convertedValue;
+                if (double.TryParse(value, out convertedValue))
+                {
+                    Valid = true;
+                    setValue = convertedValue;
+                }
+                else
+                {
+                    Valid = false;
+                }
+            }
+
             _backingProperty.SetValue(_backingInstance, setValue);
             
             OnPropertyChanged(nameof(Value));
