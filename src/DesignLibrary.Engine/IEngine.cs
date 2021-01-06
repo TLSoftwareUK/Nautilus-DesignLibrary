@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Threading;
 using System.Threading.Tasks;
 using Jpp.DesignCalculations.Calculations;
 
@@ -12,7 +13,7 @@ namespace Jpp.DesignCalculations.Engine
 
         void SetContainer(CalculationContainer container);
 
-        Task RunAsync();
+        Task RunAsync(CancellationToken token);
 
         void InvalidateCalculation(Calculation calc);
     }

@@ -27,7 +27,7 @@ namespace Jpp.DesignCalculations.Engine.Project
                 try
                 {
                     Calc.VerifyInputs();
-                    return Status.Failed;
+                    return Status.WaitingCalc;
                 }
                 catch (ArgumentNullException)
                 {
@@ -70,12 +70,16 @@ namespace Jpp.DesignCalculations.Engine.Project
             Inputs = inputs.OrderBy(a => a.Group).ThenBy(a => a.Name).ToList();
             Outputs = outputs.OrderBy(a => a.Group).ThenBy(a => a.Name).ToList();
         }
-        
+
         public void OnDeserialize()
         {
             foreach (IOProperty input in Inputs)
             {
-                input.PropertyChanged += (sender, args) => this.OnPropertyChanged(nameof(Inputs));
+                input.PropertyChanged += (sender, args) =>
+                {
+                    this.Calc.Calculated = false;
+                    this.OnPropertyChanged(nameof(Inputs));
+                };
             }
         }
     }
@@ -85,7 +89,8 @@ namespace Jpp.DesignCalculations.Engine.Project
         Ok,
         Failed,
         Warning,
-        InputRequired
+        InputRequired,
+        WaitingCalc
     }
     
 }
