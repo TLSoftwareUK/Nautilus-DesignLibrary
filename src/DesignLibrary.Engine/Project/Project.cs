@@ -68,6 +68,7 @@ namespace Jpp.DesignCalculations.Engine.Project
             ProjectRevision newRevision = await CurrentRevision.Revise(name);
             Revisions.Add(newRevision.RevisionId, newRevision);
             CurrentRevisionId = newRevision.RevisionId;
+            newRevision.PropertyChanged += (sender, args) => this.OnPropertyChanged(nameof(Revisions));
             this.OnPropertyChanged(nameof(Revisions));
         }
 
@@ -87,6 +88,15 @@ namespace Jpp.DesignCalculations.Engine.Project
             newInstance.Name = String.Empty;
 
             return newInstance;
+        }
+
+        public void OnDeserialize()
+        {
+            foreach (ProjectRevision rev in Revisions.Values)
+            {
+                rev.PropertyChanged += (sender, args) => this.OnPropertyChanged(nameof(Revisions));
+                rev.OnDeserialize();
+            }
         }
     }
 }

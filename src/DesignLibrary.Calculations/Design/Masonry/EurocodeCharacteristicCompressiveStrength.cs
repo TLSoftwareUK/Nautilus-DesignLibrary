@@ -17,7 +17,7 @@ namespace Jpp.DesignCalculations.Calculations.Design.Masonry
         [Output("", "", "", UnitTypes.Pressure)]
         public double CharacteristicCompressiveStrength { get; set; }
 
-        public override void RunBody(OutputBuilder builder)
+        protected override void RunBody(OutputBuilder builder)
         {
             if (MasonryUnit != null)
             {

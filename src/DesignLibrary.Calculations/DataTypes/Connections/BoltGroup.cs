@@ -25,7 +25,7 @@ namespace Jpp.DesignCalculations.Calculations.DataTypes.Connections
             _rows = new List<BoltRow>();
         }
 
-        public override void RunBody(OutputBuilder builder)
+        protected override void RunBody(OutputBuilder builder)
         {
             ShearResistance = 0;
             Member1MajorBearingResistance = 0;

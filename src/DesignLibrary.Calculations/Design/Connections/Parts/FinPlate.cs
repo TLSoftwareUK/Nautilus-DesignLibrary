@@ -14,7 +14,7 @@ namespace Jpp.DesignCalculations.Calculations.Design.Connections.Parts
             Code = Resources.FinPlate_Code;
         }
 
-        public override void RunBody(OutputBuilder builder)
+        protected override void RunBody(OutputBuilder builder)
         {
             throw new NotImplementedException();
         }

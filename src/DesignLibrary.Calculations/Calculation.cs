@@ -1,14 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Jpp.DesignCalculations.Calculations.Attributes;
+using TLS.TypeDiscriminatorSourceGenerator;
 
 namespace Jpp.DesignCalculations.Calculations
 {
     /// <summary>
     /// Abstract class representing a single calculation
     /// </summary>
+    [TypeDiscriminator]
     public abstract class Calculation
     {
         /// <summary>
@@ -56,6 +57,7 @@ namespace Jpp.DesignCalculations.Calculations
             Calculated = false;
         }
 
+        //TODO: Change this to return a bool, and make this version private
         /// <summary>
         /// Checks all required inputs are not null
         /// </summary>

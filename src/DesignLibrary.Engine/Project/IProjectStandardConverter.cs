@@ -77,12 +77,6 @@ namespace Jpp.DesignCalculations.Engine.Project
                 writer.WritePropertyName("TypeValue");
                 JsonSerializer.Serialize(writer, derivedA);
             }
-            /*else if (value is DerivedB derivedB)
-            {
-                writer.WriteNumber("TypeDiscriminator", (int)TypeDiscriminator.DerivedB);
-                writer.WritePropertyName("TypeValue");
-                JsonSerializer.Serialize(writer, derivedB);
-            }*/
             else
             {
                 throw new NotSupportedException();

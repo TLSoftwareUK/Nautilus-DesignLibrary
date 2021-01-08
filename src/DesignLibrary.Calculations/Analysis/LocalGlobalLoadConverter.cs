@@ -16,7 +16,7 @@ namespace Jpp.DesignCalculations.Calculations.Analysis
         public double GlobalMinorShear { get; set; }
         public double GlobalAxial { get; set; }
 
-        public override void RunBody(OutputBuilder builder)
+        protected override void RunBody(OutputBuilder builder)
         {
             GlobalMinorShear = 0;
             GlobalMajorShear = 0;
