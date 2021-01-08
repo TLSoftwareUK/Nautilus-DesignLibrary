@@ -3,10 +3,11 @@ using System.Collections.Concurrent;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Jpp.DesignCalculations.Calculations;
-using Jpp.DesignCalculations.Engine.Project;
+using TLS.DesignLibrary.Calculations;
+using TLS.DesignLibrary.Calculations.Output;
+using TLS.DesignLibrary.Engine.Project;
 
-namespace Jpp.DesignCalculations.Engine
+namespace TLS.DesignLibrary.Engine
 {
     public abstract class AbstractEngine : IEngine
     {

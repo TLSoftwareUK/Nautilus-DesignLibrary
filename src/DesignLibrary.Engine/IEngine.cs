@@ -1,9 +1,9 @@
-﻿using System.ComponentModel;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
-using Jpp.DesignCalculations.Calculations;
+using TLS.DesignLibrary.Calculations;
+using TLS.DesignLibrary.Calculations.Output;
 
-namespace Jpp.DesignCalculations.Engine
+namespace TLS.DesignLibrary.Engine
 {
     public interface IEngine
     {

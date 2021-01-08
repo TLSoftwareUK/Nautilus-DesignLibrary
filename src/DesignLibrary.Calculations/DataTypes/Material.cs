@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Jpp.DesignCalculations.Calculations.DataTypes
+﻿namespace TLS.DesignLibrary.Calculations.DataTypes
 {
     /// <summary>
     /// Class representing the physical properties of a material

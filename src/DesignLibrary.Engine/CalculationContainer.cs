@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using Jpp.Common;
-using Jpp.DesignCalculations.Calculations;
-using Jpp.DesignCalculations.Engine.Project;
+using TLS.DesignLibrary.Calculations;
+using TLS.DesignLibrary.Engine.Project;
 
-namespace Jpp.DesignCalculations.Engine
+namespace TLS.DesignLibrary.Engine
 {
     public class CalculationContainer : BaseNotify
     {

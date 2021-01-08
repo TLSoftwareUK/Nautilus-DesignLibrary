@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using Jpp.Common;
-using Jpp.DesignCalculations.Calculations;
+using TLS.DesignLibrary.Calculations;
 
-namespace Jpp.DesignCalculations.Engine
+namespace TLS.DesignLibrary.Engine
 {
     public class Scratchpad : BaseNotify
     {

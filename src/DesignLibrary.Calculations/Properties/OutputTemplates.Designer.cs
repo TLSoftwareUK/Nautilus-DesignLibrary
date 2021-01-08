@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Jpp.DesignCalculations.Calculations.Properties {
+namespace TLS.DesignLibrary.Calculations.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Jpp.DesignCalculations.Calculations.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Jpp.DesignCalculations.Calculations.Properties.OutputTemplates", typeof(OutputTemplates).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TLS.DesignLibrary.Calculations.Properties.OutputTemplates", typeof(OutputTemplates).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -65,9 +65,22 @@ namespace Jpp.DesignCalculations.Calculations.Properties {
         ///  &lt;h1&gt;
         ///  Bolt Resistances
         ///&lt;/h1&gt;
-        ///  &lt;h2&gt;Shear Resistance&lt;/h2&gt;
-        ///  &lt;h2&gt;Bearing Resistance&lt;/h2&gt;
-        ///&lt;/div&gt;.
+        ///  &lt;h2&gt;Properties&lt;/h2&gt;
+        ///  &lt;h3&gt;Bolt Properties&lt;/h3&gt;
+        ///  &lt;table&gt;
+        ///    &lt;input name=&quot;Diameter&quot;/&gt;
+        ///    &lt;input name=&quot;HoleDiameter&quot;/&gt;
+        ///    &lt;input name=&quot;Grade&quot;/&gt;
+        ///	&lt;input name=&quot;DesignUltimateStrength&quot;/&gt;
+        ///	&lt;input name=&quot;TensileStressArea&quot;/&gt;
+        ///    &lt;input name=&quot;PartialFactorResistanceBolt&quot;/&gt;
+        ///	&lt;input name=&quot;MajorSpacing&quot;/&gt;
+        ///	&lt;input name=&quot;MinorSpacing&quot;/&gt;
+        ///  &lt;/table&gt;
+        ///  &lt;h3&gt;Member 1 Properties&lt;/h3&gt;
+        ///  &lt;table&gt;
+        ///    &lt;input name=&quot;Member1Thickness&quot;/&gt;
+        ///    &lt;input name=&quot;Member1UltimateStre [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string DataTypes_Bolt {
             get {

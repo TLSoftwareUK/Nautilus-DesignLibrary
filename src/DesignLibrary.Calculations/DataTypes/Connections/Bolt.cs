@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Jpp.DesignCalculations.Calculations.Attributes;
-using MathNet.Numerics.LinearAlgebra.Complex.Solvers;
+using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.Output;
 
-namespace Jpp.DesignCalculations.Calculations.DataTypes.Connections
+namespace TLS.DesignLibrary.Calculations.DataTypes.Connections
 {
     [HiddenCalculation]
     // TODO: Add countersunk bolt option

@@ -1,8 +1,9 @@
 ﻿using System;
-using Jpp.DesignCalculations.Calculations.Attributes;
-using Jpp.DesignCalculations.Calculations.DataTypes.Masonry;
+using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.DataTypes.Masonry;
+using TLS.DesignLibrary.Calculations.Output;
 
-namespace Jpp.DesignCalculations.Calculations.Design.Masonry
+namespace TLS.DesignLibrary.Calculations.Design.Masonry
 {
     public class EurocodeCharacteristicCompressiveStrength : ContextlessCalculation
     {

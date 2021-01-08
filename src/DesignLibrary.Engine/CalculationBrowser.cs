@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Jpp.DesignCalculations.Calculations;
-using Jpp.DesignCalculations.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations;
+using TLS.DesignLibrary.Calculations.Attributes;
 
-namespace Jpp.DesignCalculations.Engine
+namespace TLS.DesignLibrary.Engine
 {
     public class CalculationBrowser
     {

@@ -1,8 +1,8 @@
 ﻿using System;
-using Jpp.DesignCalculations.Calculations.Attributes;
-using Jpp.DesignCalculations.Calculations.DataTypes;
+using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.DataTypes;
 
-namespace Jpp.DesignCalculations.Calculations.Analysis.Bars.Steel
+namespace TLS.DesignLibrary.Calculations.Analysis.Bars.Steel
 {
     [HiddenCalculation]
     public class SteelBarAxial : AbstractBarAxial

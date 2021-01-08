@@ -1,4 +1,4 @@
-﻿namespace Jpp.DesignCalculations.Calculations.DataTypes
+﻿namespace TLS.DesignLibrary.Calculations.DataTypes
 {
     /// <summary>
     /// Possible types of combinations supported

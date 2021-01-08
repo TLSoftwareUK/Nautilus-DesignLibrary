@@ -3,11 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <RootNamespace>Jpp.DesignCalculations.Calculations</RootNamespace>
+    <RootNamespace>TLS.DesignLibrary.Calculations</RootNamespace>
     <LangVersion>9.0</LangVersion>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)\GeneratedFiles</CompilerGeneratedFilesOutputPath>
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <AssemblyName>DesignLibrary.Calculations</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

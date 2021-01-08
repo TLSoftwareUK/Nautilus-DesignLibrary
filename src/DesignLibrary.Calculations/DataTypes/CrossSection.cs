@@ -1,4 +1,4 @@
-﻿namespace Jpp.DesignCalculations.Calculations.DataTypes
+﻿namespace TLS.DesignLibrary.Calculations.DataTypes
 {
     /// <summary>
     /// Class representing a structural cross section

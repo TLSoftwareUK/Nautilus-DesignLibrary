@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Jpp.DesignCalculations.Calculations.DataTypes;
+using TLS.DesignLibrary.Calculations.DataTypes;
 
-namespace Jpp.DesignCalculations.Calculations
+namespace TLS.DesignLibrary.Calculations
 {
     /// <summary>
     /// Base class for calculations requiring a context to run

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Jpp.DesignCalculations.Calculations.Analysis;
-using Jpp.DesignCalculations.Calculations.Attributes;
-using Jpp.DesignCalculations.Calculations.DataTypes;
+using TLS.DesignLibrary.Calculations.Analysis;
+using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.DataTypes;
 
-namespace Jpp.DesignCalculations.Calculations.Design.Connections
+namespace TLS.DesignLibrary.Calculations.Design.Connections
 {
     public abstract class SteelConnection : ContextualCalculation
     {

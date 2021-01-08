@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Jpp.DesignCalculations.Engine
+namespace TLS.DesignLibrary.Engine
 {
     public class Element : CalculationContainer
     {

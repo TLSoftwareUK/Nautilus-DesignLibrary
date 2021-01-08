@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Jpp.DesignCalculations.Calculations.Design.Foundations
+namespace TLS.DesignLibrary.Calculations.Design.Foundations
 {
     public enum VolumeChangePotential
     {

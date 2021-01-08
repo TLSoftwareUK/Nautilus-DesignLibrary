@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Jpp.DesignCalculations.Engine.Project
+namespace TLS.DesignLibrary.Engine.Project
 {
     public class IProjectStandardConverter : JsonConverter<IProjectStandard>
     {

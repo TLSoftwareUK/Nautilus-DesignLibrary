@@ -1,8 +1,9 @@
 ﻿using System;
-using Jpp.DesignCalculations.Calculations.Attributes;
-using Jpp.DesignCalculations.Calculations.DataTypes;
+using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.DataTypes;
+using TLS.DesignLibrary.Calculations.Output;
 
-namespace Jpp.DesignCalculations.Calculations.Design.Connections.Parts
+namespace TLS.DesignLibrary.Calculations.Design.Connections.Parts
 {
     [HiddenCalculation]
     // TODO: Verify incoming for shear??

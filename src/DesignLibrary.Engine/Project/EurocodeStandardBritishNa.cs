@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Jpp.DesignCalculations.Engine.Project
+﻿namespace TLS.DesignLibrary.Engine.Project
 {
     class EurocodeStandardBritishNa : EurocodeStandard
     {

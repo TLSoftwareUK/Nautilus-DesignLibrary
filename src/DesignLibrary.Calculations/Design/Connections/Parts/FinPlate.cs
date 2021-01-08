@@ -1,8 +1,9 @@
 ﻿using System;
-using Jpp.DesignCalculations.Calculations.Attributes;
-using Jpp.DesignCalculations.Calculations.Properties;
+using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.Output;
+using TLS.DesignLibrary.Calculations.Properties;
 
-namespace Jpp.DesignCalculations.Calculations.Design.Connections.Parts
+namespace TLS.DesignLibrary.Calculations.Design.Connections.Parts
 {
     [HiddenCalculation]
     class FinPlate : Plate

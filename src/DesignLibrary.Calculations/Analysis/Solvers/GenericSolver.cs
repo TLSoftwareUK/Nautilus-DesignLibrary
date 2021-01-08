@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Jpp.DesignCalculations.Calculations.Analysis.Bars;
-using Jpp.DesignCalculations.Calculations.DataTypes;
 using MathNet.Numerics.LinearAlgebra;
+using TLS.DesignLibrary.Calculations.Analysis.Bars;
+using TLS.DesignLibrary.Calculations.DataTypes;
 
-namespace Jpp.DesignCalculations.Calculations.Analysis.Solvers
+namespace TLS.DesignLibrary.Calculations.Analysis.Solvers
 {
     public abstract class GenericSolver : ContextualCalculation
     {

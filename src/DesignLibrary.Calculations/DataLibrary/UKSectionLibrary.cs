@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using Jpp.DesignCalculations.Calculations.DataTypes;
-using Jpp.DesignCalculations.Calculations.Properties;
+using TLS.DesignLibrary.Calculations.DataTypes;
+using TLS.DesignLibrary.Calculations.Properties;
 
-namespace Jpp.DesignCalculations.Calculations.DataLibrary
+namespace TLS.DesignLibrary.Calculations.DataLibrary
 {
     public class UKSectionLibrary
     {

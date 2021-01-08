@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Jpp.DesignCalculations.Calculations.Output
+namespace TLS.DesignLibrary.Calculations.Output
 {
     class CalculationOutput
     {

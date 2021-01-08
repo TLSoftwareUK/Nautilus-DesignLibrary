@@ -1,4 +1,4 @@
-﻿namespace Jpp.DesignCalculations.Engine.Project
+﻿namespace TLS.DesignLibrary.Engine.Project
 {
     public interface IProjectStandard
     {

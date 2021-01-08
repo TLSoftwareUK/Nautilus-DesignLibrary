@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Jpp.DesignCalculations.Calculations;
+using TLS.DesignLibrary.Calculations;
 
-namespace Jpp.DesignCalculations.Engine.Project
+namespace TLS.DesignLibrary.Engine.Project
 {
     public class ProjectConverter : JsonConverter<Project>
     {

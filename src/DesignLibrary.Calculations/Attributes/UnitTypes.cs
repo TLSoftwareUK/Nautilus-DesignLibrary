@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Jpp.DesignCalculations.Calculations.Attributes
+namespace TLS.DesignLibrary.Calculations.Attributes
 {
     public enum UnitTypes
     {

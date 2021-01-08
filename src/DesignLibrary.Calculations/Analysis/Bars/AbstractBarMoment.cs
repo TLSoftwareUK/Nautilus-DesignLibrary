@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using Jpp.DesignCalculations.Calculations.DataTypes;
+﻿using TLS.DesignLibrary.Calculations.DataTypes;
 
-namespace Jpp.DesignCalculations.Calculations.Analysis.Bars
+namespace TLS.DesignLibrary.Calculations.Analysis.Bars
 {
     public abstract class AbstractBarMoment : ContextualCalculation
     {

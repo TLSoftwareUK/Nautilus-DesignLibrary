@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
-using Jpp.DesignCalculations.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.Output;
 
-namespace Jpp.DesignCalculations.Calculations.DataTypes.Connections
+namespace TLS.DesignLibrary.Calculations.DataTypes.Connections
 {
     [HiddenCalculation]
     public class BoltGroup : ContextlessCalculation

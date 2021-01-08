@@ -1,10 +1,9 @@
 ﻿using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Jpp.DesignCalculations.Calculations;
-using Jpp.DesignCalculations.Engine.Project;
+using TLS.DesignLibrary.Calculations;
 
-namespace Jpp.DesignCalculations.Engine
+namespace TLS.DesignLibrary.Engine
 {
     public class CpuEngine : AbstractEngine
     {

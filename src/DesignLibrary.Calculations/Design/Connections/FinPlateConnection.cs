@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Jpp.DesignCalculations.Calculations.Design.Connections.Parts;
-using Jpp.DesignCalculations.Calculations.Properties;
+using TLS.DesignLibrary.Calculations.Design.Connections.Parts;
+using TLS.DesignLibrary.Calculations.Properties;
 
-namespace Jpp.DesignCalculations.Calculations.Design.Connections
+namespace TLS.DesignLibrary.Calculations.Design.Connections
 {
     class FinPlateConnection : SteelConnection
     {

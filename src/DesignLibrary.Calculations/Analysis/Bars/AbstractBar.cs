@@ -1,7 +1,7 @@
-﻿using Jpp.DesignCalculations.Calculations.Attributes;
-using Jpp.DesignCalculations.Calculations.DataTypes;
+﻿using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.DataTypes;
 
-namespace Jpp.DesignCalculations.Calculations.Analysis.Bars
+namespace TLS.DesignLibrary.Calculations.Analysis.Bars
 {
     /// <summary>
     /// Base class for all structural bar elements

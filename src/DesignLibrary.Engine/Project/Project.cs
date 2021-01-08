@@ -7,7 +7,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Jpp.Common;
 
-namespace Jpp.DesignCalculations.Engine.Project
+namespace TLS.DesignLibrary.Engine.Project
 {
     public class Project : BaseNotify
     {

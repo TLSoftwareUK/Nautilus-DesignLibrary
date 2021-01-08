@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
-using Jpp.DesignCalculations.Calculations.Attributes;
-using Jpp.DesignCalculations.Calculations.Design.Connections.Parts;
+using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.Design.Connections.Parts;
+using TLS.DesignLibrary.Calculations.Output;
 
-namespace Jpp.DesignCalculations.Calculations.DataTypes.Connections
+namespace TLS.DesignLibrary.Calculations.DataTypes.Connections
 {
     [HiddenCalculation]
     // TODO: Only one outstand row is supported at the moment

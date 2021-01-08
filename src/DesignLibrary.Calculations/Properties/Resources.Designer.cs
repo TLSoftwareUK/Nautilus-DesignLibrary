@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Jpp.DesignCalculations.Calculations.Properties {
+namespace TLS.DesignLibrary.Calculations.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Jpp.DesignCalculations.Calculations.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Jpp.DesignCalculations.Calculations.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TLS.DesignLibrary.Calculations.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

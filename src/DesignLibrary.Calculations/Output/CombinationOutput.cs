@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Jpp.DesignCalculations.Calculations.Output
+﻿namespace TLS.DesignLibrary.Calculations.Output
 {
     class CombinationOutput
     {

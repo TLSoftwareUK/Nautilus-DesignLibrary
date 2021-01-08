@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Jpp.DesignCalculations.Calculations.Analysis.Bars;
-using Jpp.DesignCalculations.Calculations.Attributes;
-using Jpp.DesignCalculations.Calculations.DataTypes;
 using MathNet.Numerics.LinearAlgebra;
+using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.DataTypes;
 
-namespace Jpp.DesignCalculations.Calculations.Analysis.Solvers
+namespace TLS.DesignLibrary.Calculations.Analysis.Solvers
 {
     [HiddenCalculation]
     public partial class TrussSolver2d : GenericSolver

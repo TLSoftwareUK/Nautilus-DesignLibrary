@@ -1,4 +1,4 @@
-﻿namespace Jpp.DesignCalculations.Calculations.DataTypes
+﻿namespace TLS.DesignLibrary.Calculations.DataTypes
 {
     /// <summary>
     /// Load case types

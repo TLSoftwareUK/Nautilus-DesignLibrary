@@ -1,6 +1,6 @@
-﻿using Jpp.DesignCalculations.Calculations.Attributes;
+﻿using TLS.DesignLibrary.Calculations.Attributes;
 
-namespace Jpp.DesignCalculations.Calculations.Design.Connections.Parts
+namespace TLS.DesignLibrary.Calculations.Design.Connections.Parts
 {
     // TODO: Consider block tearing (3.10.2)
     public abstract class Plate : ContextlessCalculation

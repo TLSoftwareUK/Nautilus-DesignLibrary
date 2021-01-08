@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Jpp.DesignCalculations.Calculations.Attributes;
-using Jpp.DesignCalculations.Calculations.DataTypes;
-using Jpp.DesignCalculations.Calculations.DataTypes.Connections;
-using Jpp.DesignCalculations.Calculations.Design.Connections.Parts;
-using Jpp.DesignCalculations.Calculations.Properties;
+using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.DataTypes;
+using TLS.DesignLibrary.Calculations.DataTypes.Connections;
+using TLS.DesignLibrary.Calculations.Design.Connections.Parts;
+using TLS.DesignLibrary.Calculations.Properties;
 
-namespace Jpp.DesignCalculations.Calculations.Design.Connections
+namespace TLS.DesignLibrary.Calculations.Design.Connections
 {
     // TODO: Verify incoming resistance at notch
     class EndPlateConnection : SteelConnection

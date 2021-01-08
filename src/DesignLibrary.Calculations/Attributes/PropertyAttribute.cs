@@ -1,7 +1,7 @@
 ﻿using System;
-using Jpp.DesignCalculations.Calculations.Properties;
+using TLS.DesignLibrary.Calculations.Properties;
 
-namespace Jpp.DesignCalculations.Calculations.Attributes
+namespace TLS.DesignLibrary.Calculations.Attributes
 {
     [AttributeUsage(AttributeTargets.Property)]
     public class PropertyAttribute : Attribute

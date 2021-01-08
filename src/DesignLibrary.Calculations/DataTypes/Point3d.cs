@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Text;
 
-namespace Jpp.DesignCalculations.Calculations.DataTypes
+namespace TLS.DesignLibrary.Calculations.DataTypes
 {
     public class Point3d : IEquatable<Point3d>
     {

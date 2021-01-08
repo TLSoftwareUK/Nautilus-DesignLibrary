@@ -3,7 +3,7 @@ using System.IO;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Jpp.DesignCalculations.Engine.Project
+namespace TLS.DesignLibrary.Engine.Project
 {
     public class ProjectRevision : CalculationContainer
     {

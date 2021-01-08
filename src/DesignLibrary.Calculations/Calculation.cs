@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-using Jpp.DesignCalculations.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.Output;
 using TLS.TypeDiscriminatorSourceGenerator;
 
-namespace Jpp.DesignCalculations.Calculations
+namespace TLS.DesignLibrary.Calculations
 {
     /// <summary>
     /// Abstract class representing a single calculation

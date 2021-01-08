@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Jpp.DesignCalculations.Calculations.DataTypes.Masonry
+﻿namespace TLS.DesignLibrary.Calculations.DataTypes.Masonry
 {
     public class MasonryUnit
     {

@@ -1,7 +1,8 @@
 ﻿using System;
-using Jpp.DesignCalculations.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.Output;
 
-namespace Jpp.DesignCalculations.Calculations.Analysis
+namespace TLS.DesignLibrary.Calculations.Analysis
 {
     [HiddenCalculation]
     class LocalGlobalLoadConverter : ContextlessCalculation

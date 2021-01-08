@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Linq;
-using Jpp.DesignCalculations.Calculations.Output;
 
-namespace Jpp.DesignCalculations.Calculations
+namespace TLS.DesignLibrary.Calculations.Output
 {
     public class OutputBuilder
     {

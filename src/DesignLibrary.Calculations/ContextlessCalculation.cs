@@ -1,4 +1,6 @@
-﻿namespace Jpp.DesignCalculations.Calculations
+﻿using TLS.DesignLibrary.Calculations.Output;
+
+namespace TLS.DesignLibrary.Calculations
 {
     /// <summary>
     /// Base class for calculations that do not require a context to run with
