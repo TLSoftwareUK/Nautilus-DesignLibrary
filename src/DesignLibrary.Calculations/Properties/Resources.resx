@@ -207,6 +207,24 @@
   <data name="FinPlate_Description" xml:space="preserve">
     <value>Fin Plate</value>
   </data>
+  <data name="LintelDesigner_CalculationName" xml:space="preserve">
+    <value>Lintel</value>
+  </data>
+  <data name="LintelDesigner_Code" xml:space="preserve">
+    <value>Specialist Design</value>
+  </data>
+  <data name="LintelDesigner_Description" xml:space="preserve">
+    <value>Designer for proprietary lintels</value>
+  </data>
+  <data name="LintelDesigner_Product_Description" xml:space="preserve">
+    <value>Proprietary Lintel Product to be designed</value>
+  </data>
+  <data name="LintelDesigner_Product_Group" xml:space="preserve">
+    <value>Lintel Properties</value>
+  </data>
+  <data name="LintelDesigner_Product_Name" xml:space="preserve">
+    <value>Product</value>
+  </data>
   <data name="NHBC2020FoundationDepth_CalculationName" xml:space="preserve">
     <value>NHBC Foundation Depth 2020</value>
   </data>

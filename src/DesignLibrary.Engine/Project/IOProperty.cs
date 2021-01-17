@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Text.Json.Serialization;
 using EnumsNET;
 using Jpp.Common;
 using TLS.DesignLibrary.Calculations;
 using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Calculations.DataTypes;
 
 namespace TLS.DesignLibrary.Engine.Project
 {
@@ -23,6 +25,34 @@ namespace TLS.DesignLibrary.Engine.Project
         public IOPropertyDataType DataType { get; set; }
         
         public IReadOnlyCollection<string> EnumDescriptions { get; private set; }
+        
+        [JsonIgnore]
+        public Type DatasetType { get; private set; }
+        
+        [JsonIgnore]
+        public DatasetItem? DatasetValue
+        {
+            get
+            {
+                return GetDatasetValue();}
+            set { SetDatasetValue(value); }
+        }
+
+        private void SetDatasetValue(DatasetItem value)
+        {
+            _backingProperty.SetValue(_backingInstance, value);
+            Valid = true;
+            OnPropertyChanged(nameof(Value));
+        }
+
+        private DatasetItem? GetDatasetValue()
+        {
+            object readValue = _backingProperty.GetValue(_backingInstance);
+            if (readValue == null)
+                return null;
+            
+            return (DatasetItem)readValue;
+        }
 
         public string Value
         {
@@ -45,7 +75,12 @@ namespace TLS.DesignLibrary.Engine.Project
                 Valid = !(String.IsNullOrWhiteSpace(Value) && Required);
 
                 var t = Nullable.GetUnderlyingType(_backingProperty.PropertyType);
-                
+
+                if (t == null)
+                {
+                    t = _backingProperty.PropertyType;
+                }
+
                 if (t.IsEnum)
                 {
                     DataType = IOPropertyDataType.Enum;
@@ -59,6 +94,11 @@ namespace TLS.DesignLibrary.Engine.Project
 
                     EnumDescriptions = _enumDescriptions;
 
+                }
+                if (typeof(DatasetItem).IsAssignableFrom(t))
+                {
+                    DataType = IOPropertyDataType.Dataset;
+                    DatasetType = t;
                 }
                 else
                 {
@@ -139,6 +179,7 @@ namespace TLS.DesignLibrary.Engine.Project
     {
         Numeric,
         Text,
-        Enum
+        Enum,
+        Dataset
     }
 }

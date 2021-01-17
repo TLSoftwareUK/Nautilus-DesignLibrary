@@ -331,6 +331,60 @@ namespace TLS.DesignLibrary.Calculations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lintel.
+        /// </summary>
+        internal static string LintelDesigner_CalculationName {
+            get {
+                return ResourceManager.GetString("LintelDesigner_CalculationName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specialist Design.
+        /// </summary>
+        internal static string LintelDesigner_Code {
+            get {
+                return ResourceManager.GetString("LintelDesigner_Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Designer for proprietary lintels.
+        /// </summary>
+        internal static string LintelDesigner_Description {
+            get {
+                return ResourceManager.GetString("LintelDesigner_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Proprietary Lintel Product to be designed.
+        /// </summary>
+        internal static string LintelDesigner_Product_Description {
+            get {
+                return ResourceManager.GetString("LintelDesigner_Product_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lintel Properties.
+        /// </summary>
+        internal static string LintelDesigner_Product_Group {
+            get {
+                return ResourceManager.GetString("LintelDesigner_Product_Group", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product.
+        /// </summary>
+        internal static string LintelDesigner_Product_Name {
+            get {
+                return ResourceManager.GetString("LintelDesigner_Product_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to NHBC Foundation Depth 2020.
         /// </summary>
         internal static string NHBC2020FoundationDepth_CalculationName {

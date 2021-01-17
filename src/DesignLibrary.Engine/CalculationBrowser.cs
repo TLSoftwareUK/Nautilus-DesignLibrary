@@ -50,7 +50,7 @@ namespace TLS.DesignLibrary.Engine
             foreach (Calculation availableCalculation in AvailableCalculations)
             {
                 string calcNamespace = availableCalculation.GetType().Namespace;
-                calcNamespace = calcNamespace.Replace("Jpp.DesignCalculations.Calculations.", "");
+                calcNamespace = calcNamespace.Replace("TLS.DesignLibrary.Calculations.", "");
                 string[] parts = calcNamespace.Split('.');
 
                 Queue<string> path = new Queue<string>(parts);
