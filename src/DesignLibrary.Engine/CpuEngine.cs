@@ -12,6 +12,11 @@ namespace TLS.DesignLibrary.Engine
             await Task.Run(async () =>
             {
                 await base.RunAsync(token).ConfigureAwait(false);
+                
+                Output.BeginOutput();
+                
+                //Build context
+                CalculationContext cc = new CalculationContext(_container.LoadCases, _container.Combinations, Output);
 
                 while (!token.IsCancellationRequested && _workQueue.Any())
                 {
@@ -22,7 +27,7 @@ namespace TLS.DesignLibrary.Engine
                     switch (c)
                     {
                         case ContextualCalculation contextualCalculation:
-                            //TODO: Rune contextual calcs
+                            contextualCalculation.Run(cc);
                             break;
 
                         case ContextlessCalculation contextlessCalculation:
@@ -33,6 +38,8 @@ namespace TLS.DesignLibrary.Engine
                 }
             }).ConfigureAwait(false);
 
+            _container.Output = Output.EndOutput();
+            
             Status = IEngineStatus.Ok;
         }
     }

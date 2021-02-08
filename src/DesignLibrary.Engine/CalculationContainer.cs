@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using Jpp.Common;
 using TLS.DesignLibrary.Calculations;
+using TLS.DesignLibrary.Calculations.DataTypes;
 using TLS.DesignLibrary.Engine.Project;
 
 namespace TLS.DesignLibrary.Engine
@@ -24,6 +25,12 @@ namespace TLS.DesignLibrary.Engine
             get { return _contextualCalculations; }
             private set { _contextualCalculations = value; }
         }
+        
+        [JsonInclude]
+        public List<LoadCase> LoadCases { get; set; }
+        
+        [JsonInclude]
+        public List<Combination> Combinations { get; set; }
 
         public IReadOnlyList<EngineCalculation> Calculations
         {
@@ -35,6 +42,8 @@ namespace TLS.DesignLibrary.Engine
                 return result;
             }
         }
+        
+        public string Output { get; set; }
 
         private List<EngineCalculation> _contextualCalculations;
 
@@ -42,6 +51,26 @@ namespace TLS.DesignLibrary.Engine
         {
             _contextlessCalculations = new List<EngineCalculation>();
             _contextualCalculations = new List<EngineCalculation>();
+            LoadCases = new List<LoadCase>()
+            {
+                new LoadCase()
+                {
+                    Name = "Self-Weight",
+                    Type = LoadCaseType.Permanent
+                }
+            };
+            Combinations = new List<Combination>()
+            {
+                new Combination()
+                {
+                    Name = "ULS",
+                    CombinationType = CombinationType.ULS_EQ,
+                    LoadFactor = new double[]
+                    {
+                        1.35
+                    }
+                }
+            };
         }
 
         public Calculation AddCalculation(Type info, double x, double y, string name)

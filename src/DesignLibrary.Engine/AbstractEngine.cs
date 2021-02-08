@@ -20,24 +20,23 @@ namespace TLS.DesignLibrary.Engine
         
         public AbstractEngine()
         {
-            Output = new OutputBuilder();
-
             _workQueue = new ConcurrentQueue<Calculation>();
         }
 
         public void SetContainer(CalculationContainer container)
         {
             _container = container;
+            Output = new OutputBuilder(_container.Output);
             InvalidateAwaitingCalcs();
         }
-
+        
         public virtual async Task RunAsync(CancellationToken token)
         {
             if (_container == null)
                 throw new InvalidOperationException("Container required to run");
 
             Status = IEngineStatus.Running;
-            Output.Clear();
+            //Output.Clear();
         }
 
         public void InvalidateCalculation(Calculation calc)

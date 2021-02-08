@@ -23,11 +23,11 @@ namespace TLS.DesignLibrary.Calculations
 
         public OutputBuilder Output { get; private set; }
 
-        public CalculationContext()
+        public CalculationContext(List<LoadCase> loadCases, List<Combination> combinations, OutputBuilder output)
         {
-            LoadCases = new List<LoadCase>();
-            Combinations = new List<Combination>();
-            Output = new OutputBuilder();
+            LoadCases = loadCases;
+            Combinations = combinations;
+            Output = output;
         }
     }
 }
