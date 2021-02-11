@@ -11,6 +11,7 @@ namespace TLS.DesignLibrary.Calculations.Attributes
         Length,
         Area,
         Volume,
-        Pressure
+        Pressure,
+        LineLoad
     }
 }

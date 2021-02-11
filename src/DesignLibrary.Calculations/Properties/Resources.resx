@@ -412,4 +412,67 @@
   <data name="UKB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UKB.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="Panel_CalculationName" xml:space="preserve">
+    <value>Analytical Panel</value>
+  </data>
+  <data name="Panel_Description" xml:space="preserve">
+    <value>Analytical panel for transferring loads to edge supports</value>
+  </data>
+  <data name="Panel_Code" xml:space="preserve">
+    <value>First Principles</value>
+  </data>
+  <data name="Panel_Loads_Name" xml:space="preserve">
+    <value>Area Loads</value>
+  </data>
+  <data name="Panel_Loads_Description" xml:space="preserve">
+    <value>Area loads applied to panel</value>
+  </data>
+  <data name="Panel_Loads_Group" xml:space="preserve">
+    <value>Loads</value>
+  </data>
+  <data name="Panel_TwoWaySpanning_Name" xml:space="preserve">
+    <value>Two Way Spanning</value>
+  </data>
+  <data name="Panel_TwoWaySpanning_Description" xml:space="preserve">
+    <value>Indicates if panel span (and is supported) in both directions</value>
+  </data>
+  <data name="Panel_TwoWaySpanning_Group" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="Panel_HorizontalSpan_Name" xml:space="preserve">
+    <value>Horizontal DImension</value>
+  </data>
+  <data name="Panel_HorizontalSpan_Description" xml:space="preserve">
+    <value>Horizontal span of panel</value>
+  </data>
+  <data name="Panel_HorizontalSpan_Group" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="Panel_VerticalSpan_Name" xml:space="preserve">
+    <value>Vertical Dimension</value>
+  </data>
+  <data name="Panel_VerticalSpan_Description" xml:space="preserve">
+    <value>Vertical span of panel</value>
+  </data>
+  <data name="Panel_VerticalSpan_Group" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="Panel_HorizontalLineLoad_Name" xml:space="preserve">
+    <value>Horizontal</value>
+  </data>
+  <data name="Panel_HorizontalLineLoad_Description" xml:space="preserve">
+    <value>Line load at a horizontal support</value>
+  </data>
+  <data name="Panel_HorizontalLineLoad_Group" xml:space="preserve">
+    <value>Support Loads</value>
+  </data>
+  <data name="Panel_VerticalLineLoad_Name" xml:space="preserve">
+    <value>Vertical</value>
+  </data>
+  <data name="Panel_VerticalLineLoad_Description" xml:space="preserve">
+    <value>Line load at a vertical support</value>
+  </data>
+  <data name="Panel_VerticalLineLoad_Group" xml:space="preserve">
+    <value>Support Loads</value>
+  </data>
 </root>

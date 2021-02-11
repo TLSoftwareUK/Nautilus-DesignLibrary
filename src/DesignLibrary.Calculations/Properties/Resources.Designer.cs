@@ -745,6 +745,195 @@ namespace TLS.DesignLibrary.Calculations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Analytical Panel.
+        /// </summary>
+        internal static string Panel_CalculationName {
+            get {
+                return ResourceManager.GetString("Panel_CalculationName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Principles.
+        /// </summary>
+        internal static string Panel_Code {
+            get {
+                return ResourceManager.GetString("Panel_Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Analytical panel for transferring loads to edge supports.
+        /// </summary>
+        internal static string Panel_Description {
+            get {
+                return ResourceManager.GetString("Panel_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Line load at a horizontal support.
+        /// </summary>
+        internal static string Panel_HorizontalLineLoad_Description {
+            get {
+                return ResourceManager.GetString("Panel_HorizontalLineLoad_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Support Loads.
+        /// </summary>
+        internal static string Panel_HorizontalLineLoad_Group {
+            get {
+                return ResourceManager.GetString("Panel_HorizontalLineLoad_Group", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Horizontal.
+        /// </summary>
+        internal static string Panel_HorizontalLineLoad_Name {
+            get {
+                return ResourceManager.GetString("Panel_HorizontalLineLoad_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Horizontal span of panel.
+        /// </summary>
+        internal static string Panel_HorizontalSpan_Description {
+            get {
+                return ResourceManager.GetString("Panel_HorizontalSpan_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Properties.
+        /// </summary>
+        internal static string Panel_HorizontalSpan_Group {
+            get {
+                return ResourceManager.GetString("Panel_HorizontalSpan_Group", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Horizontal DImension.
+        /// </summary>
+        internal static string Panel_HorizontalSpan_Name {
+            get {
+                return ResourceManager.GetString("Panel_HorizontalSpan_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Area loads applied to panel.
+        /// </summary>
+        internal static string Panel_Loads_Description {
+            get {
+                return ResourceManager.GetString("Panel_Loads_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loads.
+        /// </summary>
+        internal static string Panel_Loads_Group {
+            get {
+                return ResourceManager.GetString("Panel_Loads_Group", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Area Loads.
+        /// </summary>
+        internal static string Panel_Loads_Name {
+            get {
+                return ResourceManager.GetString("Panel_Loads_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Indicates if panel span (and is supported) in both directions.
+        /// </summary>
+        internal static string Panel_TwoWaySpanning_Description {
+            get {
+                return ResourceManager.GetString("Panel_TwoWaySpanning_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Properties.
+        /// </summary>
+        internal static string Panel_TwoWaySpanning_Group {
+            get {
+                return ResourceManager.GetString("Panel_TwoWaySpanning_Group", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Two Way Spanning.
+        /// </summary>
+        internal static string Panel_TwoWaySpanning_Name {
+            get {
+                return ResourceManager.GetString("Panel_TwoWaySpanning_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Line load at a vertical support.
+        /// </summary>
+        internal static string Panel_VerticalLineLoad_Description {
+            get {
+                return ResourceManager.GetString("Panel_VerticalLineLoad_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Support Loads.
+        /// </summary>
+        internal static string Panel_VerticalLineLoad_Group {
+            get {
+                return ResourceManager.GetString("Panel_VerticalLineLoad_Group", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vertical.
+        /// </summary>
+        internal static string Panel_VerticalLineLoad_Name {
+            get {
+                return ResourceManager.GetString("Panel_VerticalLineLoad_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vertical span of panel.
+        /// </summary>
+        internal static string Panel_VerticalSpan_Description {
+            get {
+                return ResourceManager.GetString("Panel_VerticalSpan_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Properties.
+        /// </summary>
+        internal static string Panel_VerticalSpan_Group {
+            get {
+                return ResourceManager.GetString("Panel_VerticalSpan_Group", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vertical Dimension.
+        /// </summary>
+        internal static string Panel_VerticalSpan_Name {
+            get {
+                return ResourceManager.GetString("Panel_VerticalSpan_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Height of plate.
         /// </summary>
         internal static string Plate_MajorDimension_Description {

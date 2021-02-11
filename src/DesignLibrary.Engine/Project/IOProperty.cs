@@ -108,6 +108,7 @@ namespace TLS.DesignLibrary.Engine.Project
                         case UnitTypes.Area:
                         case UnitTypes.Pressure:
                         case UnitTypes.Volume:
+                        case UnitTypes.LineLoad:
                             DataType = IOPropertyDataType.Numeric;
                             break;
 
