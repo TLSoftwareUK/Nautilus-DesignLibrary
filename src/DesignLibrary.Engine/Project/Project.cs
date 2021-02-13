@@ -90,12 +90,12 @@ namespace TLS.DesignLibrary.Engine.Project
             return newInstance;
         }
 
-        public void OnDeserialize()
+        public void OnDeserialize(IUnitConverter converter)
         {
             foreach (ProjectRevision rev in Revisions.Values)
             {
                 rev.PropertyChanged += (sender, args) => this.OnPropertyChanged(nameof(Revisions));
-                rev.OnDeserialize();
+                rev.OnDeserialize(converter);
             }
         }
     }

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text.Json.Serialization;
 using Jpp.Common;
 using TLS.DesignLibrary.Calculations;
 using TLS.DesignLibrary.Calculations.Attributes;
+using TLS.DesignLibrary.Engine.Project.IOProperties;
 
 namespace TLS.DesignLibrary.Engine.Project
 {
@@ -36,16 +38,34 @@ namespace TLS.DesignLibrary.Engine.Project
             }
         }
 
+        [JsonIgnore]
         public IReadOnlyList<IOProperty> Inputs { get; private set; }
+        
+        [JsonIgnore]
         public IReadOnlyList<IOProperty> Outputs { get; private set; }
 
+        //TODO: Review this and see if can be removed
+        [JsonConstructor]
         public EngineCalculation(double x, double y, string instanceName, Calculation calc)
         {
             X = x;
             Y = y;
             InstanceName = instanceName;
             Calc = calc;
+        }
+        
+        public EngineCalculation(double x, double y, string instanceName, Calculation calc, IUnitConverter converter)
+        {
+            X = x;
+            Y = y;
+            InstanceName = instanceName;
+            Calc = calc;
 
+            BuildProperties(converter);
+        }
+
+        private void BuildProperties(IUnitConverter converter)
+        {
             List<IOProperty> inputs = new List<IOProperty>();
             List<IOProperty> outputs = new List<IOProperty>();
             
@@ -54,7 +74,7 @@ namespace TLS.DesignLibrary.Engine.Project
 
             foreach (PropertyInfo prop in inputFields)
             {
-                IOProperty newProp = new IOProperty(prop, calc);
+                IOProperty newProp = IOProperty.CreateInstance(prop, Calc, converter);
                 inputs.Add(newProp);
                 newProp.PropertyChanged += (sender, args) => { OnPropertyChanged(nameof(Calc)); };
             }
@@ -64,15 +84,17 @@ namespace TLS.DesignLibrary.Engine.Project
 
             foreach (PropertyInfo prop in outputFields)
             {
-                outputs.Add(new IOProperty(prop, calc));
+                outputs.Add(IOProperty.CreateInstance(prop, Calc, converter));
             }
 
             Inputs = inputs.OrderBy(a => a.Group).ThenBy(a => a.Name).ToList();
             Outputs = outputs.OrderBy(a => a.Group).ThenBy(a => a.Name).ToList();
         }
 
-        public void OnDeserialize()
+        public void OnDeserialize(IUnitConverter converter)
         {
+            BuildProperties(converter);
+            
             foreach (IOProperty input in Inputs)
             {
                 input.PropertyChanged += (sender, args) =>

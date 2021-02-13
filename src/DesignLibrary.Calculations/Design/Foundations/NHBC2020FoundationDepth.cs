@@ -14,58 +14,58 @@ namespace TLS.DesignLibrary.Calculations.Design.Foundations
 
         [Input("NHBC2020FoundationDepth_ExistingGroundLevel_Name",
             "NHBC2020FoundationDepth_ExistingGroundLevel_Description",
-            "NHBC2020FoundationDepth_ExistingGroundLevel_Group",
-            true)]
+            "NHBC2020FoundationDepth_ExistingGroundLevel_Group", 
+            true, UnitTypes.Length)]
         public double? ExistingGroundLevel { get; set; }
 
         [Input("NHBC2020FoundationDepth_ProposedGroundLevel_Name",
             "NHBC2020FoundationDepth_ProposedGroundLevel_Description",
-            "NHBC2020FoundationDepth_ProposedGroundLevel_Group")]
+            "NHBC2020FoundationDepth_ProposedGroundLevel_Group", units:UnitTypes.Length)]
         public double? ProposedGroundLevel { get; set; }
 
         [Input("NHBC2020FoundationDepth_ExistingTreeInfluence_Name",
             "NHBC2020FoundationDepth_ExistingTreeInfluence_Description",
-            "NHBC2020FoundationDepth_ExistingTreeInfluence_Group")]
+            "NHBC2020FoundationDepth_ExistingTreeInfluence_Group", units:UnitTypes.Length)]
         public double? ExistingTreeInfluence { get; set; }
 
         [Input("NHBC2020FoundationDepth_ProposedTreeInfluence_Name",
             "NHBC2020FoundationDepth_ProposedTreeInfluence_Description",
-            "NHBC2020FoundationDepth_ProposedTreeInfluence_Group")]
+            "NHBC2020FoundationDepth_ProposedTreeInfluence_Group", units:UnitTypes.Length)]
         public double? ProposedTreeInfluence { get; set; }
 
         [Input("NHBC2020FoundationDepth_RemovedTreeInfluence_Name",
             "NHBC2020FoundationDepth_RemovedTreeInfluence_Description",
-            "NHBC2020FoundationDepth_RemovedTreeInfluence_Group")]
+            "NHBC2020FoundationDepth_RemovedTreeInfluence_Group", units:UnitTypes.Length)]
         public double? RemovedTreeInfluence { get; set; }
 
         [Input("NHBC2020FoundationDepth_TopOfConcreteLevel_Name",
             "NHBC2020FoundationDepth_TopOfConcreteLevel_Description",
-            "NHBC2020FoundationDepth_TopOfConcreteLevel_Group")]
+            "NHBC2020FoundationDepth_TopOfConcreteLevel_Group", units:UnitTypes.Length)]
         public double? TopOfConcreteLevel { get; set; }
 
         [Output("NHBC2020FoundationDepth_FoundationDepth_Name",
             "NHBC2020FoundationDepth_FoundationDepth_Description",
-            "NHBC2020FoundationDepth_FoundationDepth_Group")]
+            "NHBC2020FoundationDepth_FoundationDepth_Group", units:UnitTypes.Length)]
         public double? FoundationDepth { get; private set; }
 
         [Output("NHBC2020FoundationDepth_MinimumFoundationDepth_Name",
             "NHBC2020FoundationDepth_MinimumFoundationDepth_Description",
-            "NHBC2020FoundationDepth_MinimumFoundationDepth_Group")]
+            "NHBC2020FoundationDepth_MinimumFoundationDepth_Group", units:UnitTypes.Length)]
         public double? MinimumFoundationDepth { get; private set; }
 
         [Output("NHBC2020FoundationDepth_ExistingPlantingFoundationDepth_Name",
             "NHBC2020FoundationDepth_ExistingPlantingFoundationDepth_Description",
-            "NHBC2020FoundationDepth_ExistingPlantingFoundationDepth_Group")]
+            "NHBC2020FoundationDepth_ExistingPlantingFoundationDepth_Group", units:UnitTypes.Length)]
         public double? ExistingPlantingFoundationDepth { get; private set; }
 
         [Output("NHBC2020FoundationDepth_RemovedExistingPlantingFoundationDepth_Name",
             "NHBC2020FoundationDepth_RemovedExistingPlantingFoundationDepth_Description",
-            "NHBC2020FoundationDepth_RemovedExistingPlantingFoundationDepth_Group")]
+            "NHBC2020FoundationDepth_RemovedExistingPlantingFoundationDepth_Group", units:UnitTypes.Length)]
         public double? RemovedExistingPlantingFoundationDepth { get; private set; }
 
         [Output("NHBC2020FoundationDepth_ProposedPlantingFoundationDepth_Name",
             "NHBC2020FoundationDepth_ProposedPlantingFoundationDepth_Description",
-            "NHBC2020FoundationDepth_ProposedPlantingFoundationDepth_Group")]
+            "NHBC2020FoundationDepth_ProposedPlantingFoundationDepth_Group", units:UnitTypes.Length)]
         public double? ProposedPlantingFoundationDepth { get; private set; }
 
         public NHBC2020FoundationDepth() : base()

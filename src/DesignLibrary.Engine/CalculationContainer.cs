@@ -83,10 +83,10 @@ namespace TLS.DesignLibrary.Engine
             };
         }
 
-        public Calculation AddCalculation(Type info, double x, double y, string name)
+        public Calculation AddCalculation(Type info, double x, double y, string name, IUnitConverter converter)
         {
             Calculation calc = (Calculation)Activator.CreateInstance(info);
-            EngineCalculation eCalc = new EngineCalculation(x, y, name, calc);
+            EngineCalculation eCalc = new EngineCalculation(x, y, name, calc, converter);
             eCalc.PropertyChanged += (sender, args) => { OnPropertyChanged(nameof(ContextlessCalculations)); };
             if (typeof(ContextualCalculation).IsAssignableFrom(calc.GetType()))
             {
@@ -103,12 +103,12 @@ namespace TLS.DesignLibrary.Engine
         }
 
         //TODO: Should this have a converter?
-        public void OnDeserialize()
+        public void OnDeserialize(IUnitConverter converter)
         {
             foreach (EngineCalculation calc in Calculations)
             {
                 calc.PropertyChanged += (sender, args) => this.OnPropertyChanged(nameof(Calculations));
-                calc.OnDeserialize();
+                calc.OnDeserialize(converter);
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using TLS.DesignLibrary.Calculations;
@@ -9,11 +10,19 @@ namespace TLS.DesignLibrary.Engine.Project
     {
         private static JsonSerializerOptions? _options;
 
+        private IUnitConverter _converter;
+        
+        public ProjectConverter(IUnitConverter converter)
+        {
+            _converter = converter;
+        }
+        
         public override Project? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             BuildOptions();
             Project? project = JsonSerializer.Deserialize<Project>(ref reader, _options);
-            project.OnDeserialize();
+            project.OnDeserialize(_converter);
+
             return project;
         }
 
