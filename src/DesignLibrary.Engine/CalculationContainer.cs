@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Text.Json.Serialization;
 using Jpp.Common;
 using TLS.DesignLibrary.Calculations;
@@ -27,10 +29,10 @@ namespace TLS.DesignLibrary.Engine
         }
         
         [JsonInclude]
-        public List<LoadCase> LoadCases { get; set; }
+        public ObservableCollection<LoadCase> LoadCases { get; set; }
         
         [JsonInclude]
-        public List<Combination> Combinations { get; set; }
+        public ObservableCollection<Combination> Combinations { get; set; }
         
         [JsonInclude]
         public Combination? ActiveCombinationGroup { get; set; }
@@ -61,26 +63,64 @@ namespace TLS.DesignLibrary.Engine
             ActiveCombinationGroups = new List<ActiveCombinationGroup>();
             ActiveCombinationGroup = null;
             
-            LoadCases = new List<LoadCase>()
+            LoadCases = new ObservableCollection<LoadCase>()
             {
                 new LoadCase()
                 {
+                    Id = Guid.Parse("66d7ee45-c8b2-40b8-9e7d-defa42eef48f"),
                     Name = "Self-Weight",
                     Type = LoadCaseType.Permanent
                 }
             };
-            Combinations = new List<Combination>()
+            Combinations = new ObservableCollection<Combination>()
             {
                 new Combination()
                 {
+                    Id = Guid.Parse("1c9efd78-82ef-46b4-a4c1-626e4e857e0b"),
                     Name = "ULS",
                     CombinationType = CombinationType.ULS_EQ,
-                    LoadFactor = new double[]
+                    LoadFactor = new Dictionary<Guid, double>
                     {
-                        1.35
+                        { Guid.Parse("66d7ee45-c8b2-40b8-9e7d-defa42eef48f"), 1.35 }
                     }
                 }
             };
+            
+            LoadCases.CollectionChanged += LoadCasesOnCollectionChanged;
+            Combinations.CollectionChanged += CombinationsOnCollectionChanged;
+        }
+
+        private void CombinationsOnCollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
+        {
+            this.OnPropertyChanged(nameof(Combinations));
+            //TODO: Implement
+        }
+
+        private void LoadCasesOnCollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
+        {
+            this.OnPropertyChanged(nameof(LoadCases));
+            
+            if (e.Action == NotifyCollectionChangedAction.Add)
+            {
+                foreach (Combination combination in Combinations)
+                {
+                    foreach (LoadCase loadCase in e.NewItems)
+                    {
+                        combination.LoadFactor.Add(loadCase.Id, 0);
+                    }
+                }
+            }
+
+            if (e.Action == NotifyCollectionChangedAction.Remove)
+            {
+                foreach (Combination combination in Combinations)
+                {
+                    foreach (LoadCase loadCase in e.OldItems)
+                    {
+                        combination.LoadFactor.Remove(loadCase.Id);
+                    }
+                }
+            }
         }
 
         public Calculation AddCalculation(Type info, double x, double y, string name, IUnitConverter converter)
@@ -110,6 +150,9 @@ namespace TLS.DesignLibrary.Engine
                 calc.PropertyChanged += (sender, args) => this.OnPropertyChanged(nameof(Calculations));
                 calc.OnDeserialize(converter);
             }
+            
+            LoadCases.CollectionChanged += LoadCasesOnCollectionChanged;
+            Combinations.CollectionChanged += CombinationsOnCollectionChanged;
         }
     }
 }

@@ -16,7 +16,8 @@ namespace TLS.DesignLibrary.Engine
                 Output.BeginOutput();
                 
                 //Build context
-                CalculationContext cc = new CalculationContext(_container.LoadCases, _container.Combinations, Output);
+                //TODO: Remove to list, temp to get working
+                CalculationContext cc = new CalculationContext(_container.LoadCases.ToList(), _container.Combinations.ToList(), Output);
 
                 while (!token.IsCancellationRequested && _workQueue.Any())
                 {

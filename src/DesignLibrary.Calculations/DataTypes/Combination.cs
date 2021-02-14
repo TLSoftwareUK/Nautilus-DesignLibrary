@@ -1,10 +1,18 @@
-﻿namespace TLS.DesignLibrary.Calculations.DataTypes
+﻿using System;
+using System.Collections.Generic;
+
+namespace TLS.DesignLibrary.Calculations.DataTypes
 {
     /// <summary>
     /// Represents a single code combination
     /// </summary>
     public class Combination
     {
+        /// <summary>
+        /// Internal Guid handle to identify the combination
+        /// </summary>
+        public Guid Id { get; set; }  = Guid.NewGuid();
+        
         /// <summary>
         /// Combination name
         /// </summary>
@@ -18,6 +26,6 @@
         /// <summary>
         /// Array of Partial Factor of Safety to be used
         /// </summary>
-        public double[] LoadFactor { get; set; }
+        public Dictionary<Guid, double> LoadFactor { get; set; }
     }
 }
