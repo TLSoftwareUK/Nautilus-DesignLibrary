@@ -475,4 +475,31 @@
   <data name="Panel_VerticalLineLoad_Group" xml:space="preserve">
     <value>Support Loads</value>
   </data>
+  <data name="AreaLoadInput_CalculationName" xml:space="preserve">
+    <value>Area Load Input</value>
+  </data>
+  <data name="AreaLoadInput_Description" xml:space="preserve">
+    <value>Input loader for Area Loads</value>
+  </data>
+  <data name="AreaLoadInput_Code" xml:space="preserve">
+    <value>First Principles</value>
+  </data>
+  <data name="AreaLoadInput_ComponentLoad_Name" xml:space="preserve">
+    <value>Component Loads</value>
+  </data>
+  <data name="AreaLoadInput_ComponentLoad_Description" xml:space="preserve">
+    <value>Loads that form the total area load</value>
+  </data>
+  <data name="AreaLoadInput_ComponentLoad_Group" xml:space="preserve">
+    <value>Inputs</value>
+  </data>
+  <data name="AreaLoadInput_Load_Name" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="AreaLoadInput_Load_Description" xml:space="preserve">
+    <value>Total Output Load</value>
+  </data>
+  <data name="AreaLoadInput_Load_Group" xml:space="preserve">
+    <value>Outputs</value>
+  </data>
 </root>

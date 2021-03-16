@@ -40,7 +40,19 @@ namespace TLS.DesignLibrary.Engine.Project.IOProperties
 
         protected override string GetValue()
         {
-            object readValue = _backingProperty.GetValue(_backingInstance);
+            object readValue;
+            
+            if (Indexed)
+            {
+                PropertyInfo pInfo =  _backingProperty.GetValue(_backingInstance).GetType().GetProperty("Item", new[] {typeof(int) } );
+                readValue = pInfo.GetValue(new int[] {Index});
+
+            }
+            else
+            {
+                readValue = _backingProperty.GetValue(_backingInstance);
+            }
+            
             if (readValue == null)
                 return "";
 
@@ -63,7 +75,19 @@ namespace TLS.DesignLibrary.Engine.Project.IOProperties
                 return;
             }
 
-            _backingProperty.SetValue(_backingInstance, setValue);
+            //_backingProperty.SetValue(_backingInstance, setValue);
+            
+            if (Indexed)
+            {
+                PropertyInfo pInfo =  _backingProperty.GetValue(_backingInstance).GetType().GetProperty("Item", new[] {typeof(int) } );
+                pInfo.SetValue(_backingInstance, setValue, new object[] {Index});
+
+            }
+            else
+            {
+                _backingProperty.SetValue(_backingInstance, setValue);
+            }
+            
             Valid = true;
             OnPropertyChanged(nameof(Value));
         }

@@ -35,10 +35,8 @@ namespace TLS.DesignLibrary.Engine
         public ObservableCollection<Combination> Combinations { get; set; }
         
         [JsonInclude]
-        public Combination? ActiveCombinationGroup { get; set; }
+        public Combination? ActiveCombination { get; set; }
         
-        [JsonInclude]
-        public List<ActiveCombinationGroup> ActiveCombinationGroups { get; set; }
 
         public IReadOnlyList<EngineCalculation> Calculations
         {
@@ -59,9 +57,8 @@ namespace TLS.DesignLibrary.Engine
         {
             _contextlessCalculations = new List<EngineCalculation>();
             _contextualCalculations = new List<EngineCalculation>();
-
-            ActiveCombinationGroups = new List<ActiveCombinationGroup>();
-            ActiveCombinationGroup = null;
+            
+            ActiveCombination = null;
             
             LoadCases = new ObservableCollection<LoadCase>()
             {

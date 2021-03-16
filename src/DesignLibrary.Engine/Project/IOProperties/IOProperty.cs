@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Jpp.Common;
 using TLS.DesignLibrary.Calculations;
@@ -18,6 +20,9 @@ namespace TLS.DesignLibrary.Engine.Project.IOProperties
         
         public bool Required { get; private set; }
         public bool Valid { get; protected set; }
+
+        protected bool Indexed;
+        protected int Index;
 
         public string Value
         {
@@ -59,6 +64,12 @@ namespace TLS.DesignLibrary.Engine.Project.IOProperties
                 throw new InvalidOperationException();
         }
 
+        protected IOProperty(PropertyInfo binding, Calculation instance, int index) : this(binding, instance)
+        {
+            Indexed = true;
+            Index = index;
+        }
+
         protected abstract string GetValue();
 
         protected abstract void SetValue(string value);
@@ -92,6 +103,14 @@ namespace TLS.DesignLibrary.Engine.Project.IOProperties
             {
                 return new EnumIOProperty(binding, instance);
             }
+
+            if (t.IsGenericType)
+            {
+                if(t.GetGenericTypeDefinition() == typeof(List<>))
+                {
+                    return new CollectionIOProperty(binding, instance, converter);
+                }
+            }
             if (typeof(DatasetItem).IsAssignableFrom(t))
             {
                 return new DatasetIOProperty(binding, instance);
@@ -111,6 +130,67 @@ namespace TLS.DesignLibrary.Engine.Project.IOProperties
                         throw new InvalidOperationException("Unsupported datatype");
                 }
             }
+        }
+
+        public static IOProperty CreateCollectionInstance(PropertyInfo binding, Calculation instance, IUnitConverter converter)
+        {
+            InputAttribute attr1 = binding.GetCustomAttribute<InputAttribute>();
+            UnitTypes? unitType = null;
+            if (attr1 != null)
+            {
+                unitType = attr1.Units;
+            }
+            
+            OutputAttribute attr2 = binding.GetCustomAttribute<OutputAttribute>();
+            if (attr2 != null)
+            {
+                unitType = attr2.Units;
+            }
+            
+            if (attr1 == null && attr2 == null)
+                throw new InvalidOperationException();
+            
+            if (binding.PropertyType.IsGenericType)
+            {
+                if(binding.PropertyType.GetGenericTypeDefinition() == typeof(List<>))
+                {
+                    Type t = binding.PropertyType.GetGenericArguments().First();
+                    
+                    Type nullt = Nullable.GetUnderlyingType(binding.PropertyType);
+
+                    if (nullt != null)
+                    {
+                        t = nullt;
+                    }
+
+                    if (t.IsEnum)
+                    {
+                        return new EnumIOProperty(binding, instance);
+                    }
+
+                    if (typeof(DatasetItem).IsAssignableFrom(t))
+                    {
+                        return new DatasetIOProperty(binding, instance);
+                    }
+                    else
+                    {
+                        switch (unitType)
+                        {
+                            case UnitTypes.Length:
+                            case UnitTypes.Area:
+                            case UnitTypes.Pressure:
+                            case UnitTypes.Volume:
+                            case UnitTypes.LineLoad:
+                                return new NumericIOProperty(binding, instance, converter);
+                        
+                            default:
+                                throw new InvalidOperationException("Unsupported datatype");
+                        }
+                    }
+                }
+            }
+
+            throw new InvalidOperationException();
         }
     }
 }

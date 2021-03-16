@@ -142,6 +142,87 @@ namespace TLS.DesignLibrary.Calculations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Area Load Input.
+        /// </summary>
+        internal static string AreaLoadInput_CalculationName {
+            get {
+                return ResourceManager.GetString("AreaLoadInput_CalculationName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Principles.
+        /// </summary>
+        internal static string AreaLoadInput_Code {
+            get {
+                return ResourceManager.GetString("AreaLoadInput_Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loads that form the total area load.
+        /// </summary>
+        internal static string AreaLoadInput_ComponentLoad_Description {
+            get {
+                return ResourceManager.GetString("AreaLoadInput_ComponentLoad_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inputs.
+        /// </summary>
+        internal static string AreaLoadInput_ComponentLoad_Group {
+            get {
+                return ResourceManager.GetString("AreaLoadInput_ComponentLoad_Group", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Component Loads.
+        /// </summary>
+        internal static string AreaLoadInput_ComponentLoad_Name {
+            get {
+                return ResourceManager.GetString("AreaLoadInput_ComponentLoad_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input loader for Area Loads.
+        /// </summary>
+        internal static string AreaLoadInput_Description {
+            get {
+                return ResourceManager.GetString("AreaLoadInput_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Output Load.
+        /// </summary>
+        internal static string AreaLoadInput_Load_Description {
+            get {
+                return ResourceManager.GetString("AreaLoadInput_Load_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Outputs.
+        /// </summary>
+        internal static string AreaLoadInput_Load_Group {
+            get {
+                return ResourceManager.GetString("AreaLoadInput_Load_Group", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load.
+        /// </summary>
+        internal static string AreaLoadInput_Load_Name {
+            get {
+                return ResourceManager.GetString("AreaLoadInput_Load_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bolts that form the connection.
         /// </summary>
         internal static string EndPlateConnection_BoltRows_Description {

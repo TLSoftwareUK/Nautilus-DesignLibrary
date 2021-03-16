@@ -23,12 +23,10 @@ namespace TLS.DesignLibrary.Calculations
             }
             
             ContextualRunInit(context);
-
-            int i = 0;
+            
             foreach (Combination contextCombination in context.Combinations)
             {
-                RunCombination(i, contextCombination, context);
-                i++;
+                RunCombination(contextCombination, context);
             }
 
             RunEnd(context.Output);
@@ -38,7 +36,15 @@ namespace TLS.DesignLibrary.Calculations
         {
         }
 
-        public abstract void RunCombination(int combinationIndex, Combination combination, CalculationContext context);
+        public virtual void RunCombination(int combinationIndex, Combination combination, CalculationContext context)
+        {
+
+        }
+        
+        public virtual void RunCombination(Combination combination, CalculationContext context)
+        {
+
+        }
 
         public virtual void SetContextualProperties(int combinationCount)
         { }
